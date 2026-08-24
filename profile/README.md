@@ -2,22 +2,21 @@
 
 # ⚡ TERRORIFY
 
-### Next-Generation Distributed Gaming Infrastructure & High-Frequency Virtual Worlds
+### Game Development Studio & High-Performance Multiplayer Technology
 
 [![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Java 21](https://img.shields.io/badge/Java_21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
-[![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://golang.org/)
-[![eBPF / XDP](https://img.shields.io/badge/eBPF-XDP_Shield-FF5722?style=for-the-badge&logo=linux&logoColor=white)](https://ebpf.io/)
-[![SpacetimeDB](https://img.shields.io/badge/SpacetimeDB-State_Mesh-7B2CBF?style=for-the-badge&logo=databricks&logoColor=white)](https://spacetimedb.com/)
-[![Fabric](https://img.shields.io/badge/Fabric-1.21.1-DBD0C0?style=for-the-badge&logo=curseforge&logoColor=black)](https://fabricmc.net/)
+[![Project Panama](https://img.shields.io/badge/Project_Panama-FF7043?style=for-the-badge&logo=java&logoColor=white)](https://openjdk.org/projects/panama/)
+[![BoltFFI](https://img.shields.io/badge/BoltFFI-Native_C--ABI-3D5AFE?style=for-the-badge&logo=c&logoColor=white)](https://github.com/terrorify)
+[![SpacetimeDB](https://img.shields.io/badge/SpacetimeDB-Real--Time_State-7B2CBF?style=for-the-badge&logo=databricks&logoColor=white)](https://spacetimedb.com/)
 
 <p align="center">
-  <b>Terrorify</b> pioneers high-performance game server architecture, line-rate eBPF network shields, zero-allocation physics engines, real-time distributed database synchronization, and server-side virtualization engines.
+  <b>Terrorify</b> is an independent game development studio engineering the next generation of high-frequency, ultra-responsive multiplayer worlds. We combine native compute, zero-copy FFI, and server-authoritative simulation to deliver unparalleled performance and competitive integrity.
 </p>
 
 ---
 
-[🌐 Ecosystem](#-core-ecosystem) • [🏛️ Architecture](#-system-architecture) • [⚡ Technology Stack](#-technology-stack) • [🛡️ Security & Anti-Cheat](#-security--gamesense-engine) • [🚀 Repositories](#-flagship-repositories)
+[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authoritative-validation) • [👁️ GameSense](#-gamesense-detection-lifecycle) • [🛠️ Core Tools](#-our-engineering-toolchain) • [🌐 Public Projects](#-public-projects)
 
 ---
 
@@ -25,138 +24,114 @@
 
 <br/>
 
-## 🏛️ System Architecture
+## 🎮 The Player Experience & Performance
 
-Our distributed topology decouples ingress networking, physics simulation, anti-cheat heuristics, and game state into specialized high-throughput layers:
+Our technology stack is engineered around one standard: **flawless responsiveness and absolute reliability**.
 
-```mermaid
-flowchart TD
-    subgraph Ingress ["1. Line-Rate Ingress & eBPF Shield"]
-        CLIENTS["Clients (Java / Bedrock / Mobile)"] --> INTERNODE["internode (Rust XDP / eBPF Proxy :25565)"]
-        INTERNODE --> EDGE_STAMP["EdgeStamp Microsecond Clock Engine"]
-        INTERNODE --> TOKEN_BUCKET["TokenBucket Rate Limiter (500 pkts/s)"]
-    end
-
-    subgraph ServerEngine ["2. Server Authority & Physics"]
-        EDGE_STAMP --> STOMZY["stomzy (Minestom Engine - Java 21)"]
-        EDGE_STAMP --> COBBLEMON["cobblemon (Fabric 1.21.1 + Polymer 100% Port)"]
-        STOMZY <-->|C-ABI Zero-Copy FFI| BOLT["boltffi / authority (Rust 3D AABB Physics)"]
-        BOLT <--> POLAR["polar (16³ Voxel Collision Store)"]
-    end
-
-    subgraph StateMesh ["3. Real-Time Distributed Mesh"]
-        STOMZY <-->|BSATN Wire Deltas 20Hz| STDB_HOT["SpacetimeDB Hot (Position & Combat)"]
-        COBBLEMON <-->|FOST Bridge| STDB_WARM["SpacetimeDB Warm (Inventories & Fleet State)"]
-        GAMESENSE -->|Violation Reducers| STDB_COLD["SpacetimeDB Cold (Anti-Cheat History & Economy)"]
-    end
-
-    subgraph AntiCheat ["4. Real-Time Heuristic Security"]
-        STOMZY --> GAMESENSE["gamesense (25-Check Synchronous Replay Engine)"]
-        GAMESENSE --> GCD["Mathematical GCD Angle Analyzer"]
-        GAMESENSE --> BAN_WAVE["Automated Randomized Ban Pipeline"]
-    end
-
-    subgraph Orchestration ["5. Fleet DevOps & Supervisor"]
-        CRUISERS_CLI["cruisers2 (Go Fleet Supervisor)"] --> CRUISERS_DAEMON["cruisers2-daemon (Rust Host Agent :8080)"]
-        CRUISERS_DAEMON --> STOMZY
-        CRUISERS_DAEMON --> INTERNODE
-        CRUISERS_DAEMON --> COBBLEMON
-    end
+```
+┌───────────────────────────────┐     ┌───────────────────────────────┐
+│     50–70% RAM Reduction      │     │     Sub-Millisecond Ticks     │
+│   Off-heap zero-alloc paths   │     │    Consistent 20.0 TPS rate   │
+└──────────────┬────────────────┘     └──────────────┬────────────────┘
+               │                                     │
+               ▼                                     ▼
+      ╔═════════════════════════════════════════════════════╗
+      ║              THE TERRORIFY EXPERIENCE               ║
+      ║     Zero Rubberbanding • Flawless Hit Registration  ║
+      ╚═════════════════════════════════════════════════════╝
 ```
 
-<br/>
-
-## 🌐 Core Ecosystem
-
-### 🚀 High-Frequency Game Engines & Virtualization
-* **[`stomzy`](https://github.com/terrorify/stomzy)** — Low-latency, multi-threaded Minestom JVM server engine engineered for ultra-dense multiplayer instances.
-* **[`authority`](https://github.com/terrorify/authority)** & **`boltffi`** — Standalone native 3D AABB physics simulation and line-of-sight raycasting engine written in pure Rust, bridged to the JVM via zero-copy C-ABI FFI.
-* **[`cobblemon`](https://github.com/terrorify/cobblemon)** — Pure server-side Polymer virtualized Cobblemon 1.7.3 expansion on Fabric 1.21.1 with 100% dual-compatibility across official modpacks and vanilla clients.
-* **[`fost`](https://github.com/terrorify/fost)** — *Fabric of Spacetime*: Real-time Fabric server state synchronization adapter connecting Minecraft worlds directly to SpacetimeDB reducers.
-
-### 🛡️ Networking, Ingress & Anti-Cheat
-* **[`internode`](https://github.com/terrorify/internode)** — Rust-native edge ingress proxy featuring kernel-space eBPF/XDP volumetric DDoS mitigation and microsecond-accurate packet timestamps (`EdgeStamp`).
-* **[`gamesense`](https://github.com/terrorify/gamesense)** — High-precision, zero-false-positive anti-cheat engine combining mathematical GCD angle analysis, rolling balance clocks, and deterministic replay verification.
-
-### 🛰️ Fleet Orchestration & Cloud Control
-* **[`cruisers2`](https://github.com/terrorify/cruisers2)** — Distributed container and game server fleet management daemon (Rust) with a robust CLI supervisor (Go) for automated deployment and health telemetries.
-* **[`dashvue`](https://github.com/terrorify/dashvue)** — Web management dashboard and real-time observability portal for game server fleets, live player graphs, and violation review queues.
-
-<br/>
+### ⚡ Measurable Outcomes
+* **🚀 Zero Movement Rubberbanding**: Fluid, instant motion synchronization with zero positional snap-backs during intense combat or parkour.
+* **🎯 Flawless Hit Registration**: Exact server-calculated line-of-sight and 3D raycasting ensure every projectile and melee strike connects exactly where seen.
+* **📉 Massive Memory & CPU Reduction**: Up to **50–70% lower RAM consumption** and drastically reduced CPU overhead through cache-friendly structures, off-heap native memory allocation, and eliminated garbage collection pauses.
+* **🛡️ Total Exploit Invalidation**: Traditional unfair advantages are rendered mechanically impossible at the physics layer before reaching the game loop.
 
 ---
 
-## ⚡ Technology Stack
+## 🛡️ Server-Authoritative Validation
+
+Rather than trusting client-reported inputs, our server authority architecture computes and validates all physical interactions in real-time.
+
+```
+[ Client Input ] ──▶ [ Native Physics Authority ] ──▶ [ Verified World State ]
+                             │
+                             ├─▶ Strict 3D AABB Movement Validation
+                             ├─▶ Volumetric Raycast & Hitbox Collision
+                             └─▶ Deterministic Knockback & Momentum
+```
+
+### 🚫 Exploits Rendered Obsolete:
+* ❌ **Speed & Flight**: Velocity, acceleration, and air-time envelopes are strictly enforced.
+* ❌ **Phase & V-Clip (NoClip)**: Volumetric spatial voxel collision prevents block penetration.
+* ❌ **Impossible Reach & Angle Exploits**: 3D geometric raycasting rejects all out-of-range or occluded interactions.
+* ❌ **Timer & Blink Exploits**: Motion budgets and strict client packet pacing prevent time manipulation.
+* ❌ **Knockback & Velocity Spoofing**: Momentum and trajectory vectors are computed purely on the server.
+
+---
+
+## 👁️ GameSense: Detection-to-Case Lifecycle
+
+**GameSense** is our confidential real-time heuristic and machine learning behavioral engine. Rather than relying on rigid, easily bypassed threshold checks, GameSense evaluates live gameplay patterns against high-dimensional statistical baselines.
+
+```
+       [ Live Player Telemetry ]
+                   │
+                   ▼
+     [ Heuristic & ML Evaluator ]
+  (Trained on FrozenOrb HAL Baselines)
+                   │
+         ┌─────────┴─────────┐
+         ▼                   ▼
+  [ Instant Mitigation ] [ Case Opening Queue ]
+  (Action Invalidation)   (Replay Archive & Wave)
+```
+
+### 🔬 Machine Learning & Heuristic Baselines
+Our statistical models and detection patterns are trained on extensive competitive datasets, incorporating battle-tested machine learning data and motion vectors from:
+* 📊 [**FrozenOrb/HAL_Prediction**](https://github.com/FrozenOrb/HAL_Prediction) — Advanced heuristic prediction models and movement vectors.
+* 📈 [**FrozenOrb/HALData**](https://github.com/FrozenOrb/HALData) — Historical competitive dataset and behavioral motion archives.
+
+---
+
+## 🛠️ Our Engineering Toolchain
 
 <div align="center">
 
-| Domain | Technologies & Frameworks | Key Purpose |
+| Technology | Role & Integration |
+|:---|:---|
+| **`Rust`** | High-performance native compute, deterministic physics, and spatial voxel memory systems. |
+| **`Java 21`** | Modern JVM game logic, high-throughput server platforms, and concurrent virtual thread routines. |
+| **`Project Panama`** | Next-generation Foreign Function & Memory (FFM) API providing zero-overhead native execution. |
+| **`BoltFFI`** | Custom zero-copy C-ABI bridge facilitating microsecond data exchange between Java and Rust. |
+| **`SpacetimeDB`** | Real-time distributed relational database engine managing state synchronizations and audit histories. |
+
+</div>
+
+---
+
+## 🌐 Public Projects
+
+Explore our open-source tools, protocol bridges, and spatial libraries:
+
+| Project | Description | Stack |
 |:---|:---|:---|
-| **Core Systems** | `Rust`, `Java 21`, `Go`, `C-ABI` | High-frequency computing, memory safety & native FFI |
-| **Ingress & Networking** | `eBPF / XDP`, `Netty`, `Krypton`, `Velocity` | Line-rate DDoS protection & zero-latency routing |
-| **Server Virtualization** | `Minestom`, `Fabric Loader`, `Polymer Core`, `SGUI` | High-tickrates, headless instances & pure server-side assets |
-| **Distributed State** | `SpacetimeDB`, `BSATN`, `H2 / RocksDB` | Microsecond relational subscriptions & persistent fleet state |
-| **Physics & Compute** | `3D AABB`, `Polar 16³ Voxels`, `Raycasting` | Deterministic server-authoritative physics & movement validation |
-| **DevOps & Fleet** | `Docker`, `Woodpecker CI`, `Cruisers2`, `Linux K8s` | Atomic deployments, instant rollbacks & automated fleet scaling |
-
-</div>
-
-<br/>
-
----
-
-## 🛡️ Security & GameSense Engine
-
-> [!IMPORTANT]
-> **Zero-Trust Client Authority**: All movement, combat calculations, inventory transactions, and block interactions are strictly computed server-side via native deterministic Rust physics pipelines.
-
-```
-       [ Client Input Packet ]
-                  │
-                  ▼
-       [ internode (XDP Shield) ] ── (TokenBucket + EdgeStamp)
-                  │
-                  ▼
-       [ stomzy / Fabric Engine ]
-                  │
-        ┌─────────┴─────────┐
-        ▼                   ▼
- [ boltffi (Physics) ]  [ gamesense (Heuristics) ]
-        │                   │
-        │ 3D Raycast / AABB │ Microsecond Timer Balance
-        │ Voxel Collision   │ Greatest Common Divisor (GCD)
-        ▼                   ▼
-   [ Server State ] ──▶ [ SpacetimeDB Audit Trail ]
-```
-
-<br/>
-
----
-
-## 🌟 Flagship Repositories
-
-| Repository | Purpose | Language / Stack | Status |
-|:---|:---|:---|:---|
-| [**`terrorify/cobblemon`**](https://github.com/terrorify/cobblemon) | Server-side Polymer Cobblemon engine with 1:1 modpack interop | `Java` • `Fabric 1.21.1` • `Polymer` | ![Production](https://img.shields.io/badge/Status-Production-brightgreen?style=flat-square) |
-| [**`terrorify/stomzy`**](https://github.com/terrorify/stomzy) | Next-gen Minestom JVM server engine & instanced worlds | `Java 21` • `Minestom` | ![Active](https://img.shields.io/badge/Status-Active-blue?style=flat-square) |
-| [**`terrorify/authority`**](https://github.com/terrorify/authority) | Deterministic 3D physics & raycasting calculation engine | `Rust` • `C-ABI FFI` | ![Active](https://img.shields.io/badge/Status-Active-blue?style=flat-square) |
-| [**`terrorify/internode`**](https://github.com/terrorify/internode) | Ingress edge proxy with eBPF/XDP packet mitigation | `Rust` • `eBPF` • `XDP` | ![Active](https://img.shields.io/badge/Status-Active-blue?style=flat-square) |
-| [**`terrorify/gamesense`**](https://github.com/terrorify/gamesense) | Mathematical anti-cheat engine & synchronized replay log | `Java` • `Rust` • `SpacetimeDB` | ![Active](https://img.shields.io/badge/Status-Active-blue?style=flat-square) |
-| [**`terrorify/cruisers2`**](https://github.com/terrorify/cruisers2) | Distributed fleet orchestration & supervisor daemon | `Go` • `Rust` • `Docker` | ![Active](https://img.shields.io/badge/Status-Active-blue?style=flat-square) |
-
-<br/>
+| [**`FOST`**](https://github.com/terrorify/fost) | **Fabric of Spacetime**: Real-time Fabric server state synchronization adapter connecting worlds directly to SpacetimeDB. | `Java` • `Fabric` • `SpacetimeDB` |
+| [**`Folia4dB`**](https://github.com/terrorify/folia4db) | High-concurrency SpacetimeDB relational state connector tailored for multi-threaded Folia server platforms. | `Java` • `Folia` • `SpacetimeDB` |
+| [**`polar4d`**](https://github.com/terrorify/polar4d) | High-performance spatial-temporal voxel store designed for lightning-fast spatial queries and chunk memory compaction. | `Rust` • `Native` |
+| [**`mcpclient`**](https://github.com/terrorify/mcpclient) | Developer tooling and client SDK for the Model Context Protocol (MCP) ecosystem. | `TypeScript` • `MCP` |
 
 ---
 
 <div align="center">
 
-### 🤝 Contributing & Community
+### 🤝 Connect with Terrorify
 
-We are building the future of high-frequency multiplayer worlds and low-latency distributed networks.
+Building high-frequency virtual worlds and ultra-optimized game infrastructure.
 
 [![Website](https://img.shields.io/badge/Website-terrorify.dev-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://terrorify.dev)
-[![GitHub](https://img.shields.io/badge/GitHub-Organization-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/terrorify)
+[![GitHub](https://img.shields.io/badge/GitHub-terrorify-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/terrorify)
 
-<sub>Designed with precision for the **Terrorify** Ecosystem. © 2026 Terrorify. All rights reserved.</sub>
+<sub>© 2026 Terrorify. All rights reserved.</sub>
 
 </div>
