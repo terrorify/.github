@@ -16,7 +16,7 @@
 
 ---
 
-[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authoritative-validation) • [👁️ GameSense](#-gamesense-detection-lifecycle) • [🛠️ Our Tools](#-our-engineering-toolchain) • [🌐 Public Projects](#-public-projects)
+[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authority-preventing-the-impossible) • [👁️ GameSense](#-gamesense-catching-the-probability-of-perfection) • [🛠️ Our Tools](#-our-engineering-toolchain) • [🌐 Public Projects](#-public-projects)
 
 ---
 
@@ -45,52 +45,61 @@ Our technology stack is engineered around one standard: **flawless responsivenes
 * **🚀 Zero Movement Rubberbanding**: Fluid, instant motion synchronization with zero positional snap-backs during intense combat or parkour.
 * **🎯 Flawless Hit Registration**: Exact server-calculated line-of-sight and 3D raycasting ensure every projectile and melee strike connects exactly where seen.
 * **📉 Massive Memory & CPU Reduction**: Up to **50–70% lower RAM consumption** and drastically reduced CPU overhead through cache-friendly structures, off-heap native memory allocation, and eliminated garbage collection pauses.
-* **🛡️ Total Exploit Invalidation**: Traditional unfair advantages are rendered mechanically impossible at the physics layer before reaching the game loop.
+* **🛡️ Real-Time Exploit Prevention**: Traditional impossible physical feats are invalidated instantly at the server tick level before reaching the game state.
 
 ---
 
-## 🛡️ Server-Authoritative Validation
+## 🛡️ Server Authority: Preventing the Impossible
 
-Rather than trusting client-reported inputs, our server authority architecture computes and validates all physical interactions in real-time.
+> **Server Authority is Real-Time.** Its objective is simple: **make impossible physics mechanically impossible to execute.**
 
 ```
-[ Client Input ] ──▶ [ Native Physics Authority ] ──▶ [ Verified World State ]
+[ Client Input ] ──▶ [ Real-Time Server Authority ] ──▶ [ Verified World State ]
                              │
-                             ├─▶ Strict 3D AABB Movement Validation
-                             ├─▶ Volumetric Raycast & Hitbox Collision
-                             └─▶ Deterministic Knockback & Momentum
+                             ├─▶ 3D AABB Volumetric Boundary Enforcement
+                             ├─▶ Server-Calculated Line-of-Sight & Raycasting
+                             └─▶ Deterministic Knockback & Trajectory Physics
 ```
 
-### 🚫 Exploits Rendered Obsolete:
-* ❌ **Speed & Flight**: Velocity, acceleration, and air-time envelopes are strictly enforced.
+Rather than trusting client-reported positions, our server authority architecture computes and validates all physical interactions on the fly:
+* ❌ **Speed & Flight**: Movement vectors, acceleration limits, and air-time envelopes are verified tick-by-tick.
 * ❌ **Phase & V-Clip (NoClip)**: Volumetric spatial voxel collision prevents block penetration.
 * ❌ **Impossible Reach & Angle Exploits**: 3D geometric raycasting rejects all out-of-range or occluded interactions.
 * ❌ **Timer & Blink Exploits**: Motion budgets and strict client packet pacing prevent time manipulation.
-* ❌ **Knockback & Velocity Spoofing**: Momentum and trajectory vectors are computed purely on the server.
+* ❌ **Knockback & Velocity Spoofing**: Momentum and trajectory vectors are computed purely by the server.
 
 ---
 
-## 👁️ GameSense: Detection-to-Case Lifecycle
+## 👁️ GameSense: Catching the Probability of Perfection
 
-**GameSense** is our confidential real-time heuristic and machine learning behavioral engine. Rather than relying on rigid, easily bypassed threshold checks, GameSense evaluates live gameplay patterns against high-dimensional statistical baselines.
+> **GameSense is a Slow-Burn, Delayed Evidence Engine.** While Server Authority prevents the *impossible*, GameSense is built to catch the **probability of perfection** in closet cheating.
 
 ```
-       [ Live Player Telemetry ]
-                   │
-                   ▼
-     [ Heuristic & ML Evaluator ]
-  (Trained on FrozenOrb HAL Baselines)
-                   │
-         ┌─────────┴─────────┐
-         ▼                   ▼
-  [ Instant Mitigation ] [ Case Opening Queue ]
-  (Action Invalidation)   (Replay Archive & Wave)
+       [ Server Authority Telemetry ]
+                     │
+                     ▼
+       [ GameSense Evidence Engine ]
+         (Statistical Accumulation)
+                     │
+                     ▼
+        [ Case File Dossier Generated ]
+                     │
+         ┌───────────┴───────────┐
+         ▼                       ▼
+  [ Staff Review Portal ]    [ Ban Wave Queue ]
+  (Behavioral Deep Dive)     (Delayed Action Wave)
 ```
 
-### 🔬 Machine Learning & Heuristic Baselines
-Our statistical models and detection patterns are trained on extensive competitive datasets, incorporating battle-tested machine learning data and motion vectors from:
-* 📊 [**FrozenOrb/HAL_Prediction**](https://github.com/FrozenOrb/HAL_Prediction) — Advanced heuristic prediction models and movement vectors.
-* 📈 [**FrozenOrb/HALData**](https://github.com/FrozenOrb/HALData) — Historical competitive dataset and behavioral motion archives.
+Closet cheaters do not fly or speed across maps; they subtly manipulate micro-mechanics (subtle aim smoothing, micro-reach, humanly improbable consistency over time). 
+
+### 🔬 The Detection-to-Case Lifecycle:
+1. **Telemetry Ingestion**: Gathers continuous fine-grained telemetry data generated from Server Authority validation.
+2. **Statistical Anomaly Scoring**: Evaluates movement distributions, angle deltas, and consistency curves over extended play sessions.
+3. **Case Dossier Assembly**: When suspicious perfection is detected, GameSense builds an evidence case file containing timeline logs and statistical proof.
+4. **Staff Review & Wave Execution**: Integrated with moderator dashboards for behavioral review and scheduled delayed ban waves, keeping cheat developers completely in the dark.
+
+> [!NOTE]
+> **Foundational Telemetry Research**: Our underlying telemetry schema and baseline feature tracking reference historical competitive research from [FrozenOrb/HAL_Prediction](https://github.com/FrozenOrb/HAL_Prediction) and [FrozenOrb/HALData](https://github.com/FrozenOrb/HALData).
 
 ---
 
