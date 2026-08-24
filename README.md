@@ -5,7 +5,7 @@
 ### Game Development Studio & High-Performance Multiplayer Technology
 
 [![Rust](https://img.shields.io/badge/Rust-Native_Performance-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
-[![Java 21](https://img.shields.io/badge/Java_21-Virtual_Threads-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
+[![Java 21](https://img.shields.io/badge/Java_21-Virtual_Threads-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
 [![Netty](https://img.shields.io/badge/Netty-Async_epoll_I/O-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://netty.io/)
 [![GeyserMC](https://img.shields.io/badge/GeyserMC-Bedrock_Bridge-00D26A?style=for-the-badge&logo=minecraft&logoColor=white)](https://geysermc.org/)
 [![Adventure](https://img.shields.io/badge/Kyori-Adventure_UI-FF4081?style=for-the-badge&logo=starship&logoColor=white)](https://github.com/KyoriPowered/adventure)
@@ -17,7 +17,7 @@
 
 ---
 
-[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authority-preventing-the-impossible) • [👁️ GameSense](#-gamesense-catching-the-probability-of-perfection) • [🛠️ Our Toolchain](#-our-engineering-toolchain) • [🌐 Public Projects](#-public-projects)
+[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authority-preventing-the-impossible) • [👁️ GameSense](#-gamesense-catching-the-probability-of-perfection) • [🛠️ Our Toolchain](#-our-engineering-toolchain) • [🔬 Open Algorithms & Gists](#-open-algorithms--research-gists) • [🌐 Public Projects](#-public-projects)
 
 ---
 
@@ -104,6 +104,17 @@ Closet cheaters do not fly or speed across maps; they subtly manipulate micro-me
 
 ---
 
+## 🔬 Open Algorithms & Research Gists
+
+Explore standalone, production-tested reference implementations demonstrating our systems engineering and perception authority math:
+
+| Research Gist | Category | Description | Language / ISA | Link |
+|:---|:---|:---|:---|:---|
+| **👁️ Volumetric Perception Authority** | *Perception Authority / Anti-ESP* | Sub-microsecond 3D Voxel DDA Line-of-Sight engine that mathematically suppresses occluded entity packets before network serialization, making wallhacks and ESP unbypassable. | `Rust` • `DDA` | [**View Gist ↗**](https://gist.github.com/McMmax/bb7a4e81f14e69b10336c35a96f9ceab) |
+| **🧊 3D Morton Z-Order Spatial Indexing** | *Cache Locality / Spatial Storage* | High-performance 3D Morton coordinate bit-interleaving algorithm using hardware-accelerated BMI2 instructions (`PDEP`/`PEXT`) for maximum L1/L2 cache hits. | `Rust` • `BMI2` | [**View Gist ↗**](https://gist.github.com/McMmax/2a24c020ffd5b9834df80cc9c9eb3b7c) |
+
+---
+
 ## 🛠️ Our Engineering Toolchain
 
 We build on top of battle-tested, high-performance open-source foundations and modern systems engineering standards:
@@ -112,15 +123,15 @@ We build on top of battle-tested, high-performance open-source foundations and m
 
 | Layer | Technologies | Core Purpose & Implementation |
 |:---|:---|:---|
-| **Systems & Execution** | `Rust`, `Java 21 (LTS)` | Memory-safe low-level compute, concurrent virtual thread scheduling & zero-cost abstractions. |
-| **Networking & I/O** | `Netty`, `Native epoll`, `Direct ByteBufs` | Event-driven non-blocking packet pipelines, zero-copy socket buffers & kernel event multiplexing. |
-| **Cross-Play & Ingress** | `GeyserMC`, `Floodgate` | Universal Bedrock protocol bridging, seamless console/mobile cross-play & bedrock authentication. |
-| **Client Integrations** | `Apollo` | Native Lunar Client visual integration, custom HUD elements, waypoints & rich mod communication. |
-| **Proximity Voice & Audio** | `Simple Voice Chat`, `Plasmo Voice` | High-definition 3D positional audio, spatial sound attenuation & real-time voice streaming. |
-| **Native Interop** | `Zero-Copy C-ABI`, `Native FFM` | Direct off-heap memory bindings bridging high-level game logic to native Rust physics in microseconds. |
-| **State & Persistence** | `SpacetimeDB`, `Caffeine Cache` | Real-time distributed relational database synchronization & high-hitrate concurrency caches. |
-| **Math & Spatial Queries** | `SIMD Vector Operations`, `Voxel Math` | Hardware-accelerated swept AABB intersection calculations & volumetric raycasting. |
-| **UI & Text Rendering** | `Kyori Adventure`, `MiniMessage` | Rich, responsive component-based UI rendering pipelines and clean player messaging. |
+| **Systems & Execution** | [**`Rust`**](https://www.rust-lang.org/) • [**`Java 21 (LTS)`**](https://openjdk.org/projects/jdk/21/) | Memory-safe low-level compute, concurrent virtual thread scheduling & zero-cost abstractions. |
+| **Networking & I/O** | [**`Netty`**](https://netty.io/) • `Native epoll` • `Direct ByteBufs` | Event-driven non-blocking packet pipelines, zero-copy socket buffers & kernel event multiplexing. |
+| **Cross-Play & Ingress** | [**`GeyserMC`**](https://geysermc.org/) • [**`Floodgate`**](https://geysermc.org/wiki/floodgate) | Universal Bedrock protocol bridging, seamless console/mobile cross-play & bedrock authentication. |
+| **Client Integrations** | [**`Apollo`**](https://apollo.lunarclient.dev/) | Native Lunar Client visual integration, custom HUD elements, waypoints & rich mod communication. |
+| **Proximity Voice & Audio** | [**`Simple Voice Chat`**](https://modrinth.com/plugin/simple-voice-chat) • [**`Plasmo Voice`**](https://plasmovoice.com/) | High-definition 3D positional audio, spatial sound attenuation & real-time voice streaming. |
+| **Native Interop** | `Zero-Copy C-ABI` • `Native FFM` | Direct off-heap memory bindings bridging high-level game logic to native Rust physics in microseconds. |
+| **State & Persistence** | [**`SpacetimeDB`**](https://spacetimedb.com/) • [**`Caffeine Cache`**](https://github.com/ben-manes/caffeine) | Real-time distributed relational database synchronization & high-hitrate concurrency caches. |
+| **Math & Spatial Queries** | `SIMD Vector Operations` • `Voxel Math` | Hardware-accelerated swept AABB intersection calculations & volumetric raycasting. |
+| **UI & Text Rendering** | [**`Kyori Adventure`**](https://github.com/KyoriPowered/adventure) • [**`MiniMessage`**](https://docs.advntr.dev/minimessage) | Rich, responsive component-based UI rendering pipelines and clean player messaging. |
 
 </div>
 
