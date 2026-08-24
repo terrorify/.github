@@ -117,13 +117,15 @@ Closet cheaters try to hide by using subtle tools like soft aim-assist or auto-c
 
 ## 🔬 Open Algorithms & Gists
 
-Explore standalone open-source implementations of our perception math and spatial memory algorithms:
+Explore standalone open-source implementations of our perception math, collision algorithms, and spatial memory engines:
 
 <div align="center">
 
 | Research Algorithm & Gist | Focus Area | Plain English Summary |
 |:---|:---|:---|
 | [**👁️ Volumetric Perception Authority (3D DDA)**](https://gist.github.com/McMmax/bb7a4e81f14e69b10336c35a96f9ceab) | *Anti-ESP / Line of Sight* | A fast 3D raycaster that checks if an entity is hidden behind walls. If hidden, the server never sends its data to the client, making wallhacks and ESP impossible. |
+| [**⚡ SIMD Swept AABB Collision Solver**](https://gist.github.com/McMmax/b38449bcd2b16d8e142b1ad030f235e6) | *Continuous Collision (CCD)* | A branchless vector collision solver that sweeps 3D bounding boxes along velocity paths to prevent high-speed tunneling and calculate exact impact timing. |
+| [**🧱 3D Voxel Grid Math & Traversal**](https://gist.github.com/McMmax/a6f236db9c96caefe576abe167dfe774) | *Discrete Voxel Footprints* | Fast discrete grid utilities that determine the exact block footprint of continuous physical volumes and iterate through intersecting block shapes with zero allocations. |
 | [**🧊 3D Morton Z-Order Spatial Indexing**](https://gist.github.com/McMmax/2a24c020ffd5b9834df80cc9c9eb3b7c) | *Fast Voxel Memory* | A bit-interleaving technique (using modern CPU BMI2 instructions) that keeps neighboring 3D blocks close together in RAM for instant, cache-friendly lookups. |
 
 </div>
@@ -147,7 +149,7 @@ We build with modern, high-performance open-source tools and industry standards:
 | **Proximity Voice Chat** | [**`Simple Voice Chat`**](https://modrinth.com/plugin/simple-voice-chat) • [**`Plasmo Voice`**](https://plasmovoice.com/) | Real-time 3D spatial audio where voices get louder as players walk closer. |
 | **Native Interop** | `Zero-Copy C-ABI` • `Native FFM` | Connects Java game logic to native Rust calculations in microseconds with zero memory overhead. |
 | **State & Caching** | [**`SpacetimeDB`**](https://spacetimedb.com/) • [**`Caffeine Cache`**](https://github.com/ben-manes/caffeine) | Real-time relational database sync and lightning-fast in-memory caching. |
-| **Math & Collisions** | `SIMD Vector Math` • `Voxel Math` | Fast vector calculations for bounding box intersections and line-of-sight checks. |
+| **Math & Collisions** | [**`SIMD Vector Math`**](https://gist.github.com/McMmax/b38449bcd2b16d8e142b1ad030f235e6) • [**`Voxel Math`**](https://gist.github.com/McMmax/a6f236db9c96caefe576abe167dfe774) | Fast vector calculations for bounding box intersections and discrete grid raycasting checks. |
 | **UI & Player Messaging** | [**`Kyori Adventure`**](https://github.com/KyoriPowered/adventure) • [**`MiniMessage`**](https://docs.advntr.dev/minimessage) | Clean, rich text formatting and responsive menus across all player screens. |
 
 </div>
