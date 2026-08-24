@@ -8,6 +8,7 @@
 [![Java 21](https://img.shields.io/badge/Java_21-Virtual_Threads-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
 [![Netty](https://img.shields.io/badge/Netty-Async_I/O-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://netty.io/)
 [![GeyserMC](https://img.shields.io/badge/GeyserMC-Bedrock_Bridge-00D26A?style=for-the-badge&logo=minecraft&logoColor=white)](https://geysermc.org/)
+[![Badlion Client](https://img.shields.io/badge/Badlion-ModAPI-FFA000?style=for-the-badge&logo=lion&logoColor=white)](https://github.com/BadlionClient/BadlionClientModAPI)
 [![LabyMod](https://img.shields.io/badge/LabyMod-Server_API-1E88E5?style=for-the-badge&logo=wolfpack&logoColor=white)](https://dev.labymod.net/)
 [![Adventure](https://img.shields.io/badge/Kyori-Adventure_UI-FF4081?style=for-the-badge&logo=starship&logoColor=white)](https://github.com/KyoriPowered/adventure)
 [![SpacetimeDB](https://img.shields.io/badge/SpacetimeDB-Real--Time_State-7B2CBF?style=for-the-badge&logo=databricks&logoColor=white)](https://spacetimedb.com/)
@@ -146,7 +147,7 @@ We build with modern, high-performance open-source tools and industry standards:
 | **Core Systems** | [**`Rust`**](https://www.rust-lang.org/) • [**`Java 21`**](https://openjdk.org/projects/jdk/21/) | Memory-safe native code for physics, paired with modern Java virtual threads for game logic. |
 | **Networking & I/O** | [**`Netty`**](https://netty.io/) • `Direct ByteBufs` | High-speed, non-blocking network pipelines that handle thousands of packets per second. |
 | **Cross-Platform Play** | [**`GeyserMC`**](https://geysermc.org/) • [**`Floodgate`**](https://geysermc.org/wiki/floodgate) | Bridges Minecraft Bedrock (consoles, mobile, Windows 10) so everyone can play together seamlessly. |
-| **Client Integrations** | [**`Apollo`**](https://apollo.lunarclient.dev/) • [**`LabyMod`**](https://dev.labymod.net/) • [**`WhatsMyClient`**](https://github.com/terrorify/WhatsMyClient) | Client brand identification, native Lunar Client HUD/waypoint hooks, and LabyMod protocol displays. |
+| **Client Integrations** | [**`Apollo`**](https://apollo.lunarclient.dev/) • [**`Badlion`**](https://github.com/BadlionClient/BadlionClientModAPI) • [**`LabyMod`**](https://dev.labymod.net/) • [**`WhatsMyClient`**](https://github.com/terrorify/WhatsMyClient) | Client brand identification, Lunar HUD/waypoint hooks, Badlion ModAPI enforcement, and LabyMod displays. |
 | **Proximity Voice Chat** | [**`Simple Voice Chat`**](https://modrinth.com/plugin/simple-voice-chat) • [**`Plasmo Voice`**](https://plasmovoice.com/) | Real-time 3D spatial audio where voices get louder as players walk closer. |
 | **Native Interop** | `Zero-Copy C-ABI` • `Native FFM` | Connects Java game logic to native Rust calculations in microseconds with zero memory overhead. |
 | **State & Caching** | [**`SpacetimeDB`**](https://spacetimedb.com/) • [**`Caffeine Cache`**](https://github.com/ben-manes/caffeine) | Real-time relational database sync and lightning-fast in-memory caching. |
@@ -167,7 +168,7 @@ Explore our open-source tools and connectors:
 
 | Project | Description | Stack |
 |:---|:---|:---|
-| [**`WhatsMyClient`**](https://github.com/terrorify/WhatsMyClient) | Accurate Minecraft client brand and handshake identification library with Lunar and LabyMod support. | `Kotlin` • `Java` • `Netty` • `Network Protocol` |
+| [**`WhatsMyClient`**](https://github.com/terrorify/WhatsMyClient) | Accurate Minecraft client brand and handshake identification library with Lunar, Badlion, and LabyMod support. | `Kotlin` • `Java` • `Netty` • `Network Protocol` |
 | [**`FOST`**](https://github.com/terrorify/fost) | **Fabric of Spacetime**: Real-time Fabric server state synchronization adapter connecting worlds directly to SpacetimeDB. | `Java` • `Fabric` • `SpacetimeDB` |
 | [**`Folia4dB`**](https://github.com/terrorify/folia4db) | High-concurrency SpacetimeDB relational state connector tailored for multi-threaded Folia server platforms. | `Java` • `Folia` • `SpacetimeDB` |
 | [**`polar4d`**](https://github.com/terrorify/polar4d) | High-performance spatial-temporal voxel store designed for lightning-fast spatial queries and chunk memory compaction. | `Rust` • `Native` |
