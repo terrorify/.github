@@ -2,22 +2,25 @@
 
 # ⚡ TERRORIFY
 
-### Game Development Studio & High-Performance Multiplayer Technology
+### High-Performance Multiplayer Game Development Studio
 
 [![Rust](https://img.shields.io/badge/Rust-Native_Performance-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Java 21](https://img.shields.io/badge/Java_21-Virtual_Threads-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
-[![Netty](https://img.shields.io/badge/Netty-Async_epoll_I/O-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://netty.io/)
+[![Netty](https://img.shields.io/badge/Netty-Async_I/O-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://netty.io/)
 [![GeyserMC](https://img.shields.io/badge/GeyserMC-Bedrock_Bridge-00D26A?style=for-the-badge&logo=minecraft&logoColor=white)](https://geysermc.org/)
 [![Adventure](https://img.shields.io/badge/Kyori-Adventure_UI-FF4081?style=for-the-badge&logo=starship&logoColor=white)](https://github.com/KyoriPowered/adventure)
 [![SpacetimeDB](https://img.shields.io/badge/SpacetimeDB-Real--Time_State-7B2CBF?style=for-the-badge&logo=databricks&logoColor=white)](https://spacetimedb.com/)
 
+<br/>
+
 <p align="center">
-  <b>Terrorify</b> is an independent game development studio engineering the next generation of high-frequency, ultra-responsive multiplayer worlds. We combine native compute, zero-copy foreign function bridging, and server-authoritative simulation to deliver unparalleled performance and competitive integrity.
+  <b>Terrorify</b> is an independent game development studio building ultra-responsive, high-frequency multiplayer worlds.<br/>
+  We focus on server-authoritative physics, low-latency networking, and high-performance game tech.
 </p>
 
 ---
 
-[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authority-preventing-the-impossible) • [👁️ GameSense](#-gamesense-catching-the-probability-of-perfection) • [🛠️ Our Toolchain](#-our-engineering-toolchain) • [🔬 Open Algorithms & Gists](#-open-algorithms--research-gists) • [🌐 Public Projects](#-public-projects)
+[🎮 Player Experience](#-the-player-experience) • [🛡️ Server Authority](#-server-authority-stopping-impossible-actions) • [👁️ GameSense](#-gamesense-catching-unnatural-perfection) • [🔬 Open Gists](#-open-algorithms--gists) • [🛠️ Toolchain](#-our-engineering-toolchain) • [🌐 Public Projects](#-public-projects)
 
 ---
 
@@ -25,121 +28,139 @@
 
 <br/>
 
-## 🎮 The Player Experience & Performance
+## 🎮 The Player Experience
 
-Our technology stack is engineered around one standard: **flawless responsiveness and absolute reliability**.
+We engineer our games around a single standard: **smooth gameplay, zero lag spikes, and fair competition.**
 
-```
-┌───────────────────────────────┐     ┌───────────────────────────────┐
-│     50–70% RAM Reduction      │     │     Sub-Millisecond Ticks     │
-│   Off-heap zero-alloc paths   │     │    Consistent 20.0 TPS rate   │
-└──────────────┬────────────────┘     └──────────────┬────────────────┘
-               │                                     │
-               ▼                                     ▼
-      ╔═════════════════════════════════════════════════════╗
-      ║              THE TERRORIFY EXPERIENCE               ║
-      ║     Zero Rubberbanding • Flawless Hit Registration  ║
-      ╚═════════════════════════════════════════════════════╝
-```
+<div align="center">
 
-### ⚡ Measurable Outcomes
-* **🚀 Zero Movement Rubberbanding**: Fluid, instant motion synchronization with zero positional snap-backs during intense combat or parkour.
-* **🎯 Flawless Hit Registration**: Exact server-calculated line-of-sight and 3D raycasting ensure every projectile and melee strike connects exactly where seen.
-* **📉 Massive Memory & CPU Reduction**: Up to **50–70% lower RAM consumption** and drastically reduced CPU overhead through cache-friendly structures, off-heap native memory allocation, and eliminated garbage collection pauses.
-* **🛡️ Real-Time Exploit Prevention**: Traditional impossible physical feats are invalidated instantly at the server tick level before reaching the game state.
+| 🚀 Zero Rubberbanding | 🎯 Precise Hit Registration |
+|:---|:---|
+| Smooth, uninterrupted movement with zero annoying snap-backs, even during high-speed parkour and combat. | Attacks and projectiles register exactly where you aim—no ghost hits, phantom swings, or desyncs. |
+
+| ⚡ Unshakable 20.0 TPS | 📉 50–70% Lower Memory |
+|:---|:---|
+| Consistent sub-millisecond server ticks that stay fast and responsive, even during massive player battles. | Efficient off-heap data structures that eliminate garbage collection lag spikes and keep servers light. |
+
+</div>
+
+<br/>
 
 ---
 
-## 🛡️ Server Authority: Preventing the Impossible
+## 🛡️ Server Authority: Stopping Impossible Actions
 
-> **Server Authority is Real-Time.** Its objective is simple: **make impossible physics mechanically impossible to execute.**
+> **Server Authority happens in real time.** If a move is physically impossible, the server blocks it instantly on that exact tick.
+
+Instead of trusting what a player's computer claims happened, our server calculates the physical world itself:
 
 ```
-[ Client Input ] ──▶ [ Real-Time Server Authority ] ──▶ [ Verified World State ]
-                             │
-                             ├─▶ 3D AABB Volumetric Boundary Enforcement
-                             ├─▶ Server-Calculated Line-of-Sight & Raycasting
-                             └─▶ Deterministic Knockback & Trajectory Physics
+[ Player Action ] ──▶ [ Server Physics Engine ] ──▶ [ Verified Game World ]
+                              │
+                              ├── Strictly checks block collisions (No walking through walls)
+                              ├── Validates true distance & line of sight (No impossible reach)
+                              └── Enforces natural gravity & velocity (No flying or super-speed)
 ```
 
-Rather than trusting client-reported positions, our server authority architecture computes and validates all physical interactions on the fly:
-* ❌ **Speed & Flight**: Movement vectors, acceleration limits, and air-time envelopes are verified tick-by-tick.
-* ❌ **Phase & V-Clip (NoClip)**: Volumetric spatial voxel collision prevents block penetration.
-* ❌ **Impossible Reach & Angle Exploits**: 3D geometric raycasting rejects all out-of-range or occluded interactions.
-* ❌ **Timer & Blink Exploits**: Motion budgets and strict client packet pacing prevent time manipulation.
-* ❌ **Knockback & Velocity Spoofing**: Momentum and trajectory vectors are computed purely by the server.
+<br/>
+
+<div align="center">
+
+| Exploit Type | What Cheaters Try To Do | How Server Authority Blocks It |
+|:---|:---|:---|
+| **Speed & Flying** | Moving faster than game limits or hovering in air. | The server calculates legal speed and gravity; illegal positions are rejected immediately. |
+| **Wall-Clips (Phase/NoClip)** | Glitching or teleporting through solid blocks. | 3D voxel collision prevents bounding boxes from entering solid obstacles. |
+| **Impossible Reach** | Hitting targets beyond normal player range. | The server casts a 3D ray to the target; hits that exceed distance or go through walls fail. |
+| **Timer / Speeding Ticks** | Sending packet bursts to run or mine faster. | The server enforces a strict time budget of 1 tick per 50ms. |
+| **Knockback Cancel** | Ignoring velocity when hit by attacks. | Knockback trajectories are calculated server-side; players must follow the applied force. |
+
+</div>
+
+<br/>
 
 ---
 
-## 👁️ GameSense: Catching the Probability of Perfection
+## 👁️ GameSense: Catching Unnatural Perfection
 
-> **GameSense is a Slow-Burn, Delayed Evidence Engine.** While Server Authority prevents the *impossible*, GameSense is built to catch the **probability of perfection** in closet cheating.
+> **GameSense is a delayed detection engine.** While Server Authority blocks *impossible* physics, GameSense catches the **unnatural perfection** of subtle closet cheats.
+
+Closet cheaters try to hide by using subtle tools like soft aim-assist or auto-clickers that stay barely within physical limits. Human hands naturally make tiny mistakes and tire over time—machines do not.
 
 ```
-       [ Server Authority Telemetry ]
+       [ Server Gameplay Telemetry ]
                      │
                      ▼
        [ GameSense Evidence Engine ]
-         (Statistical Accumulation)
+      (Tracks statistical consistency)
                      │
                      ▼
-        [ Case File Dossier Generated ]
+         [ Case File Assembled ]
                      │
          ┌───────────┴───────────┐
          ▼                       ▼
-  [ Staff Review Portal ]    [ Ban Wave Queue ]
-  (Behavioral Deep Dive)     (Delayed Action Wave)
+  [ Staff Review Tool ]      [ Scheduled Ban Wave ]
+(Review logs & replays)   (Keeps cheat makers blind)
 ```
 
-Closet cheaters do not fly or speed across maps; they subtly manipulate micro-mechanics (subtle aim smoothing, micro-reach, humanly improbable consistency over time). 
-
-### 🔬 The Detection-to-Case Lifecycle:
-1. **Telemetry Ingestion**: Gathers continuous fine-grained telemetry data generated from Server Authority validation.
-2. **Statistical Anomaly Scoring**: Evaluates movement distributions, angle deltas, and consistency curves over extended play sessions.
-3. **Case Dossier Assembly**: When suspicious perfection is detected, GameSense builds an evidence case file containing timeline logs and statistical proof.
-4. **Staff Review & Wave Execution**: Integrated with moderator dashboards for behavioral review and scheduled delayed ban waves, keeping cheat developers completely in the dark.
+### 🔬 The Detection-to-Case Lifecycle
+1. **Telemetry Ingest**: Records fine-grained movement and combat data generated during normal play.
+2. **Statistical Analysis**: Compares player consistency, angle precision, and click patterns against normal human ranges.
+3. **Evidence Dossier**: Builds a detailed timeline report with logs and replay clips whenever unnatural perfection is identified.
+4. **Staff Review & Ban Waves**: Moderators review compiled cases, and confirmed cheaters are banned in delayed waves so cheat authors cannot test workarounds.
 
 > [!NOTE]
-> **Foundational Telemetry Research**: Our underlying telemetry schema and baseline feature tracking reference historical competitive research from [FrozenOrb/HAL_Prediction](https://github.com/FrozenOrb/HAL_Prediction) and [FrozenOrb/HALData](https://github.com/FrozenOrb/HALData).
+> **Research Lineage**: Our data collection formats reference historical competitive research from [FrozenOrb/HAL_Prediction](https://github.com/FrozenOrb/HAL_Prediction) and [FrozenOrb/HALData](https://github.com/FrozenOrb/HALData).
+
+<br/>
 
 ---
 
-## 🔬 Open Algorithms & Research Gists
+## 🔬 Open Algorithms & Gists
 
-Explore standalone, production-tested reference implementations demonstrating our systems engineering and perception authority math:
+Explore standalone open-source implementations of our perception math and spatial memory algorithms:
 
-| Research Gist | Category | Description | Language / ISA | Link |
-|:---|:---|:---|:---|:---|
-| **👁️ Volumetric Perception Authority** | *Perception Authority / Anti-ESP* | Sub-microsecond 3D Voxel DDA Line-of-Sight engine that mathematically suppresses occluded entity packets before network serialization, making wallhacks and ESP unbypassable. | `Rust` • `DDA` | [**View Gist ↗**](https://gist.github.com/McMmax/bb7a4e81f14e69b10336c35a96f9ceab) |
-| **🧊 3D Morton Z-Order Spatial Indexing** | *Cache Locality / Spatial Storage* | High-performance 3D Morton coordinate bit-interleaving algorithm using hardware-accelerated BMI2 instructions (`PDEP`/`PEXT`) for maximum L1/L2 cache hits. | `Rust` • `BMI2` | [**View Gist ↗**](https://gist.github.com/McMmax/2a24c020ffd5b9834df80cc9c9eb3b7c) |
+<div align="center">
+
+| Research Algorithm & Gist | Focus Area | Plain English Summary |
+|:---|:---|:---|
+| [**👁️ Volumetric Perception Authority (3D DDA)**](https://gist.github.com/McMmax/bb7a4e81f14e69b10336c35a96f9ceab) | *Anti-ESP / Line of Sight* | A fast 3D raycaster that checks if an entity is hidden behind walls. If hidden, the server never sends its data to the client, making wallhacks and ESP impossible. |
+| [**🧊 3D Morton Z-Order Spatial Indexing**](https://gist.github.com/McMmax/2a24c020ffd5b9834df80cc9c9eb3b7c) | *Fast Voxel Memory* | A bit-interleaving technique (using modern CPU BMI2 instructions) that keeps neighboring 3D blocks close together in RAM for instant, cache-friendly lookups. |
+
+</div>
+
+<br/>
 
 ---
 
 ## 🛠️ Our Engineering Toolchain
 
-We build on top of battle-tested, high-performance open-source foundations and modern systems engineering standards:
+We build with modern, high-performance open-source tools and industry standards:
 
 <div align="center">
 
-| Layer | Technologies | Core Purpose & Implementation |
+| Layer | Tools & Standards | What We Use It For |
 |:---|:---|:---|
-| **Systems & Execution** | [**`Rust`**](https://www.rust-lang.org/) • [**`Java 21 (LTS)`**](https://openjdk.org/projects/jdk/21/) | Memory-safe low-level compute, concurrent virtual thread scheduling & zero-cost abstractions. |
-| **Networking & I/O** | [**`Netty`**](https://netty.io/) • `Native epoll` • `Direct ByteBufs` | Event-driven non-blocking packet pipelines, zero-copy socket buffers & kernel event multiplexing. |
-| **Cross-Play & Ingress** | [**`GeyserMC`**](https://geysermc.org/) • [**`Floodgate`**](https://geysermc.org/wiki/floodgate) | Universal Bedrock protocol bridging, seamless console/mobile cross-play & bedrock authentication. |
-| **Client Integrations** | [**`Apollo`**](https://apollo.lunarclient.dev/) | Native Lunar Client visual integration, custom HUD elements, waypoints & rich mod communication. |
-| **Proximity Voice & Audio** | [**`Simple Voice Chat`**](https://modrinth.com/plugin/simple-voice-chat) • [**`Plasmo Voice`**](https://plasmovoice.com/) | High-definition 3D positional audio, spatial sound attenuation & real-time voice streaming. |
-| **Native Interop** | `Zero-Copy C-ABI` • `Native FFM` | Direct off-heap memory bindings bridging high-level game logic to native Rust physics in microseconds. |
-| **State & Persistence** | [**`SpacetimeDB`**](https://spacetimedb.com/) • [**`Caffeine Cache`**](https://github.com/ben-manes/caffeine) | Real-time distributed relational database synchronization & high-hitrate concurrency caches. |
-| **Math & Spatial Queries** | `SIMD Vector Operations` • `Voxel Math` | Hardware-accelerated swept AABB intersection calculations & volumetric raycasting. |
-| **UI & Text Rendering** | [**`Kyori Adventure`**](https://github.com/KyoriPowered/adventure) • [**`MiniMessage`**](https://docs.advntr.dev/minimessage) | Rich, responsive component-based UI rendering pipelines and clean player messaging. |
+| **Core Systems** | [**`Rust`**](https://www.rust-lang.org/) • [**`Java 21`**](https://openjdk.org/projects/jdk/21/) | Memory-safe native code for physics, paired with modern Java virtual threads for game logic. |
+| **Networking & I/O** | [**`Netty`**](https://netty.io/) • `Direct ByteBufs` | High-speed, non-blocking network pipelines that handle thousands of packets per second. |
+| **Cross-Platform Play** | [**`GeyserMC`**](https://geysermc.org/) • [**`Floodgate`**](https://geysermc.org/wiki/floodgate) | Bridges Minecraft Bedrock (consoles, mobile, Windows 10) so everyone can play together seamlessly. |
+| **Client Integrations** | [**`Apollo`**](https://apollo.lunarclient.dev/) | Native integration with Lunar Client for custom HUDs, waypoints, and rich visual cues. |
+| **Proximity Voice Chat** | [**`Simple Voice Chat`**](https://modrinth.com/plugin/simple-voice-chat) • [**`Plasmo Voice`**](https://plasmovoice.com/) | Real-time 3D spatial audio where voices get louder as players walk closer. |
+| **Native Interop** | `Zero-Copy C-ABI` • `Native FFM` | Connects Java game logic to native Rust calculations in microseconds with zero memory overhead. |
+| **State & Caching** | [**`SpacetimeDB`**](https://spacetimedb.com/) • [**`Caffeine Cache`**](https://github.com/ben-manes/caffeine) | Real-time relational database sync and lightning-fast in-memory caching. |
+| **Math & Collisions** | `SIMD Vector Math` • `Voxel Math` | Fast vector calculations for bounding box intersections and line-of-sight checks. |
+| **UI & Player Messaging** | [**`Kyori Adventure`**](https://github.com/KyoriPowered/adventure) • [**`MiniMessage`**](https://docs.advntr.dev/minimessage) | Clean, rich text formatting and responsive menus across all player screens. |
 
 </div>
+
+<br/>
 
 ---
 
 ## 🌐 Public Projects
 
-Explore our open-source tools, protocol bridges, and spatial libraries:
+Explore our open-source tools and connectors:
+
+<div align="center">
 
 | Project | Description | Stack |
 |:---|:---|:---|
@@ -147,6 +168,10 @@ Explore our open-source tools, protocol bridges, and spatial libraries:
 | [**`Folia4dB`**](https://github.com/terrorify/folia4db) | High-concurrency SpacetimeDB relational state connector tailored for multi-threaded Folia server platforms. | `Java` • `Folia` • `SpacetimeDB` |
 | [**`polar4d`**](https://github.com/terrorify/polar4d) | High-performance spatial-temporal voxel store designed for lightning-fast spatial queries and chunk memory compaction. | `Rust` • `Native` |
 | [**`mcpclient`**](https://github.com/terrorify/mcpclient) | Developer tooling and client SDK for the Model Context Protocol (MCP) ecosystem. | `TypeScript` • `MCP` |
+
+</div>
+
+<br/>
 
 ---
 
