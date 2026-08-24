@@ -7,8 +7,8 @@
 [![Rust](https://img.shields.io/badge/Rust-Native_Performance-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Java 21](https://img.shields.io/badge/Java_21-Virtual_Threads-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Netty](https://img.shields.io/badge/Netty-Async_epoll_I/O-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://netty.io/)
+[![GeyserMC](https://img.shields.io/badge/GeyserMC-Bedrock_Bridge-00D26A?style=for-the-badge&logo=minecraft&logoColor=white)](https://geysermc.org/)
 [![Adventure](https://img.shields.io/badge/Kyori-Adventure_UI-FF4081?style=for-the-badge&logo=starship&logoColor=white)](https://github.com/KyoriPowered/adventure)
-[![Native FFI](https://img.shields.io/badge/Native_FFI-Zero--Copy_C--ABI-3D5AFE?style=for-the-badge&logo=c&logoColor=white)](https://github.com/terrorify)
 [![SpacetimeDB](https://img.shields.io/badge/SpacetimeDB-Real--Time_State-7B2CBF?style=for-the-badge&logo=databricks&logoColor=white)](https://spacetimedb.com/)
 
 <p align="center">
@@ -113,7 +113,10 @@ We build on top of battle-tested, high-performance open-source foundations and m
 | Layer | Technologies | Core Purpose & Implementation |
 |:---|:---|:---|
 | **Systems & Execution** | `Rust`, `Java 21 (LTS)` | Memory-safe low-level compute, concurrent virtual thread scheduling & zero-cost abstractions. |
-| **Networking & I/O** | `Netty`, `Native epoll`, `Direct ByteBufs` | Event-driven non-blocking packet pipelines, zero-copy socket buffers & kernel multiplexing. |
+| **Networking & I/O** | `Netty`, `Native epoll`, `Direct ByteBufs` | Event-driven non-blocking packet pipelines, zero-copy socket buffers & kernel event multiplexing. |
+| **Cross-Play & Ingress** | `GeyserMC`, `Floodgate` | Universal Bedrock protocol bridging, seamless console/mobile cross-play & bedrock authentication. |
+| **Client Integrations** | `Apollo` | Native Lunar Client visual integration, custom HUD elements, waypoints & rich mod communication. |
+| **Proximity Voice & Audio** | `Simple Voice Chat`, `Plasmo Voice` | High-definition 3D positional audio, spatial sound attenuation & real-time voice streaming. |
 | **Native Interop** | `Zero-Copy C-ABI`, `Native FFM` | Direct off-heap memory bindings bridging high-level game logic to native Rust physics in microseconds. |
 | **State & Persistence** | `SpacetimeDB`, `Caffeine Cache` | Real-time distributed relational database synchronization & high-hitrate concurrency caches. |
 | **Math & Spatial Queries** | `SIMD Vector Operations`, `Voxel Math` | Hardware-accelerated swept AABB intersection calculations & volumetric raycasting. |
