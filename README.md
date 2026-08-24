@@ -4,19 +4,18 @@
 
 ### Game Development Studio & High-Performance Multiplayer Technology
 
-[![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
-[![Java 21](https://img.shields.io/badge/Java_21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
-[![Project Panama](https://img.shields.io/badge/Project_Panama-FF7043?style=for-the-badge&logo=java&logoColor=white)](https://openjdk.org/projects/panama/)
-[![BoltFFI](https://img.shields.io/badge/BoltFFI-Native_C--ABI-3D5AFE?style=for-the-badge&logo=c&logoColor=white)](https://github.com/terrorify)
+[![Rust](https://img.shields.io/badge/Rust-Native_Performance-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
+[![Java 21](https://img.shields.io/badge/Java_21-Virtual_Threads-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
+[![Native FFI](https://img.shields.io/badge/Native_FFI-Zero--Copy_C--ABI-3D5AFE?style=for-the-badge&logo=c&logoColor=white)](https://github.com/terrorify)
 [![SpacetimeDB](https://img.shields.io/badge/SpacetimeDB-Real--Time_State-7B2CBF?style=for-the-badge&logo=databricks&logoColor=white)](https://spacetimedb.com/)
 
 <p align="center">
-  <b>Terrorify</b> is an independent game development studio engineering the next generation of high-frequency, ultra-responsive multiplayer worlds. We combine native compute, zero-copy FFI, and server-authoritative simulation to deliver unparalleled performance and competitive integrity.
+  <b>Terrorify</b> is an independent game development studio engineering the next generation of high-frequency, ultra-responsive multiplayer worlds. We combine native compute, zero-copy foreign function bridging, and server-authoritative simulation to deliver unparalleled performance and competitive integrity.
 </p>
 
 ---
 
-[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authority-preventing-the-impossible) • [👁️ GameSense](#-gamesense-catching-the-probability-of-perfection) • [🛠️ Our Tools](#-our-engineering-toolchain) • [🌐 Public Projects](#-public-projects)
+[🎮 What Players Feel](#-the-player-experience--performance) • [🛡️ Server Authority](#-server-authority-preventing-the-impossible) • [👁️ GameSense](#-gamesense-catching-the-probability-of-perfection) • [🛠️ Core Tools](#-our-engineering-toolchain) • [🌐 Public Projects](#-public-projects)
 
 ---
 
@@ -111,8 +110,7 @@ Closet cheaters do not fly or speed across maps; they subtly manipulate micro-me
 |:---|:---|
 | **`Rust`** | High-performance native compute, deterministic physics, and spatial voxel memory systems. |
 | **`Java 21`** | Modern JVM game logic, high-throughput server platforms, and concurrent virtual thread routines. |
-| **`Project Panama`** | Next-generation Foreign Function & Memory (FFM) API providing zero-overhead native execution. |
-| **`BoltFFI`** | Custom zero-copy C-ABI bridge facilitating microsecond data exchange between Java and Rust. |
+| **`Native Zero-Copy FFI`** | Direct foreign function and off-heap memory bridge enabling microsecond data exchange between JVM game logic and native Rust physics. |
 | **`SpacetimeDB`** | Real-time distributed relational database engine managing state synchronizations and audit histories. |
 
 </div>
