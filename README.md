@@ -145,7 +145,7 @@ We build with modern, high-performance open-source tools and industry standards:
 | **Core Systems** | [**`Rust`**](https://www.rust-lang.org/) • [**`Java 21`**](https://openjdk.org/projects/jdk/21/) | Memory-safe native code for physics, paired with modern Java virtual threads for game logic. |
 | **Networking & I/O** | [**`Netty`**](https://netty.io/) • `Direct ByteBufs` | High-speed, non-blocking network pipelines that handle thousands of packets per second. |
 | **Cross-Platform Play** | [**`GeyserMC`**](https://geysermc.org/) • [**`Floodgate`**](https://geysermc.org/wiki/floodgate) | Bridges Minecraft Bedrock (consoles, mobile, Windows 10) so everyone can play together seamlessly. |
-| **Client Integrations** | [**`Apollo`**](https://apollo.lunarclient.dev/) | Native integration with Lunar Client for custom HUDs, waypoints, and rich visual cues. |
+| **Client Integrations** | [**`Apollo`**](https://apollo.lunarclient.dev/) • [**`WhatsMyClient`**](https://github.com/terrorify/WhatsMyClient) | Client brand/handshake identification and native Lunar Client HUD/waypoint integrations. |
 | **Proximity Voice Chat** | [**`Simple Voice Chat`**](https://modrinth.com/plugin/simple-voice-chat) • [**`Plasmo Voice`**](https://plasmovoice.com/) | Real-time 3D spatial audio where voices get louder as players walk closer. |
 | **Native Interop** | `Zero-Copy C-ABI` • `Native FFM` | Connects Java game logic to native Rust calculations in microseconds with zero memory overhead. |
 | **State & Caching** | [**`SpacetimeDB`**](https://spacetimedb.com/) • [**`Caffeine Cache`**](https://github.com/ben-manes/caffeine) | Real-time relational database sync and lightning-fast in-memory caching. |
@@ -166,6 +166,7 @@ Explore our open-source tools and connectors:
 
 | Project | Description | Stack |
 |:---|:---|:---|
+| [**`WhatsMyClient`**](https://github.com/terrorify/WhatsMyClient) | Accurate Minecraft client brand and handshake identification library with zero false positives. | `Java` • `Netty` • `Network Protocol` |
 | [**`FOST`**](https://github.com/terrorify/fost) | **Fabric of Spacetime**: Real-time Fabric server state synchronization adapter connecting worlds directly to SpacetimeDB. | `Java` • `Fabric` • `SpacetimeDB` |
 | [**`Folia4dB`**](https://github.com/terrorify/folia4db) | High-concurrency SpacetimeDB relational state connector tailored for multi-threaded Folia server platforms. | `Java` • `Folia` • `SpacetimeDB` |
 | [**`polar4d`**](https://github.com/terrorify/polar4d) | High-performance spatial-temporal voxel store designed for lightning-fast spatial queries and chunk memory compaction. | `Rust` • `Native` |
